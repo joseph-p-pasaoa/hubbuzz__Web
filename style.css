@@ -9,6 +9,12 @@ HubBuzz
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+	font-family: 'Lato';
+	src: url('./fonts/Lato/Lato-BlackItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
 
 body {
   font-family: Lato, sans-serif;
@@ -21,8 +27,8 @@ input {
 
 div#ord {
   display: grid;
-  grid-template-columns: 30px 180px 110px 440px auto;
-  grid-auto-rows: 1.5em;
+  grid-template-columns: 23px 105px auto;
+  grid-auto-rows: 16px;
 }
 
 .gray {
@@ -31,20 +37,43 @@ div#ord {
 
 div.num {
   grid-column: 1;
+  font-size: 0.7em;
+  font-weight: bold;
+  font-style: italic;
 }
 
 div.date {
   grid-column: 2;
-}
-
-div.type {
-  grid-column: 3;
+  font-size: 0.7em;
+  font-weight: bold;
+  font-style: italic;
 }
 
 div.loc {
-  grid-column: 4;
+  grid-column: 3;
+  font-size: 0.7em;
+  font-weight: bold;
+  font-style: italic;
+  color: #999;
+}
+
+div.num, div.date, div.loc {
+  line-height: 1em;
+}
+
+div.type {
+  grid-column: 2;
+  font-size: 0.7em;
+  text-transform: uppercase;
 }
 
 div.msg {
-  grid-column: 5;
+  grid-column: 3;
+  font-size: 0.7em;
+  padding-left: 9px;
+  color: mediumblue;
+}
+
+div.type, div.msg {
+  line-height: 0.4em;
 }

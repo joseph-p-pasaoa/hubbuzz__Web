@@ -32,19 +32,19 @@ const heatAndChill = (input, array) => {
     d += `  ${g.days[e.getDay()]}`;
     let type = obj.type;
     if (type.slice(-5) === 'Event') {
-      type = '- ' + type.slice(0, -5);
+      type = type.slice(0, -5);
     }
     let loc = obj.repo.name;
     if (loc.slice(0, input.length) === input) {
       loc = '.. ' + loc.slice(input.length);
     }
     let msg = '';
-    if (obj.payload.commits) {
-      msg = "' " + obj.payload.commits[0].message;
+    if (obj.payload.commits && obj.payload.commits[0]) {
+      msg = obj.payload.commits[0].message;
     }
     num % 2 === 0
-      ? oven.innerHTML += `<div class='num'>${num}.</div> <div class='date'>${d}</div> <div class='type'>${type}</div> <div class='loc'>${loc}</div> <div class='msg'>${msg}</div>`
-      : oven.innerHTML += `<div class='num gray'>${num}.</div> <div class='date gray'>${d}</div> <div class='type gray'>${type}</div> <div class='loc gray'>${loc}</div> <div class='msg gray'>${msg}</div>`;
+      ? oven.innerHTML += `<div class='num'>${num}.</div> <div class='date'>${d}</div> <div class='loc'>${loc}</div> <div class='type'>${type}</div> <div class='msg'>${msg}</div>`
+      : oven.innerHTML += `<div class='num gray'>${num}.</div> <div class='date gray'>${d}</div> <div class='loc gray'>${loc}</div> <div class='type gray'>${type}</div> <div class='msg gray'>${msg}</div>`;
     num += 1;
   }
 }
