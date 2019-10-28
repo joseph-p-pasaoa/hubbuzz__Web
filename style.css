@@ -1,0 +1,50 @@
+/*
+Joseph P. Pasaoa
+HubBuzz
+*/
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  font-size: 0.9em;
+}
+
+input {
+  margin-bottom: 12px;
+}
+
+div#ord {
+  display: grid;
+  grid-template-columns: 30px 180px 110px 440px auto;
+  grid-auto-rows: 1.5em;
+}
+
+.gray {
+  background-color: #eee;
+}
+
+div.num {
+  grid-column: 1;
+}
+
+div.date {
+  grid-column: 2;
+}
+
+div.type {
+  grid-column: 3;
+}
+
+div.loc {
+  grid-column: 4;
+}
+
+div.msg {
+  grid-column: 5;
+}
